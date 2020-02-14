@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi&display=swap');
+.wrapper
+{
+  background: #7FDBFF;
+  box-shadow:2px 2px 15px #000000;
+  width:100%;
+}
+#name-list-main
+{
+  max-width:800px;
+  width:100%;
+  margin:0 auto;
+  display:block;
+  background-color:#ffffff;
+  padding:10px 20px;
+  box-shadow: 5px 2px 20px #000000;
+}
+#name-list-main h1 {
+  display: inline-block;
+  color: #ffffff;
+  text-align: center;
+ animation: fly 1s linear;
+  animation-iteration-count:1;
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  color: #0d47a1;
+  font-size: 60px;
+  letter-spacing: 5px;
+  position: relative;
+  font-family: 'Baloo Thambi', cursive;
+
+}
+#name-list-main h2{
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  color: #0d47a1;
+  letter-spacing: 3px;
+  position: relative;
+  margin-top: 0px;
+  font-family: 'Baloo Thambi', cursive;
+}
+/* Move it (define the animation) */
+@keyframes fly {
+ 0%   { 
+ transform: translateY(-200%); 		
+ }
+ 100% { 
+ transform: translateY(0%); 
+ }
+}
+.active {
+ background-color: #E8F685;
+    transition:all 0.5s ease;
+}
+ul li
+{
+  list-style-type:none;
+  color:#000000;
+  font-weight:500;
+  font-size:16px;
+}
+/*** custom checkboxes ***/
+ input[type=checkbox] {
+     position: relative;
+    top: -4px;
+    right: 2px;
+   border:0px;
+   border-top:1px solid #ffffff;
+}
+/* to hide the checkbox itself */
+ label>input[type=checkbox]:before {
+     position: relative;
+    background-color: #ffffff;
+    height: 100%;
+width: 100%;
+       border-top: 1px solid #ffffff;
+    font-family: FontAwesome;
+    display: inline-block;
+    content:"\f096";
+    letter-spacing: 10px;
+}
+/* space between checkbox and label */
+ label>input[type=checkbox]:checked:before {
+     font-family: FontAwesome;
+    display: inline-block;
+    content:"\f046";
+    letter-spacing: 5px;
+   border-top:1px solid #ffffff;
+}
+/* allow space for check mark */
+
+pre {
+  overflow-x: auto;
+  white-space: normal;  
+}
+
+ul.checkedNames label:before
+{
+ font-family: FontAwesome;
+ content:"\f101";
+} 
+ul.checkedNames label
+{
+  font-size:16px;
+  color:#40b9cf;
+}
+hr {
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+.right-border
+{
+  border-right:2px solid #cccccc;
+}
+hr {
+  margin-top:0.3em;
+  margin-bottom:0.3em;
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+hr:after {
+	content: '';
+	display: block;
+	margin-top: 2px;
+	border-top: 1px solid #8c8b8b;
+	border-bottom: 1px solid #fff;
+}
+@media only screen and (max-width: 600px) {
+  #name-list-main
+  {
+    width:90%;
+  }
+}
