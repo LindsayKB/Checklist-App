@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Name List</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    </head>
+    <body>
+      <div class="wrapper">
+        <div id="name-list-main">
+        <div class="slide-down"><h1>{{ mainHeader.toLocaleUpperCase() }}</h1></div>
+          <div class="row">
+            <div class="col-md-6 right-border">
+              <h2>{{ leftHeader.toLocaleUpperCase() }}</h2>
+              <hr>
+          <ul class="checklist">
+            <li v-for="(item,key) in items"      :id="key"> 
+               <label :for="item.item"  @click="toggle">   
+              <input type="checkbox" :value="key" v-model="names">
+                 <span>{{item}}</span></label>  
+            </li>
+          </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>{{ rightHeader.toLocaleUpperCase() }}</h2>
+              <hr>
+          <pre>
+<ul class="checkedNames">
+<li v-for="name in names"> 
+<label> {{ name }}</label>  
+</li>
+</ul>
+          </pre>
+            </div>
+      </div>
+      </div>
+      <script src="https://unpkg.com/vue"></script>
+   
+    </body>
+</html>
